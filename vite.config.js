@@ -5,6 +5,7 @@ import { resolve } from "path";
 import doctors from "./src/data/doctors.json";
 
 export default defineConfig({
+  base: "/",
   root: "src/pages",
   publicDir: resolve(__dirname, "public"),
   resolve: {
