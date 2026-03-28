@@ -1,0 +1,43 @@
+{% extends "src/layouts/_base.html" %}
+{% set title = "Контакты | Центр микрохирургии глаза PROзрение" %}
+
+{% block content %}
+    <main>
+        <section class="section page-header" style="background-color: var(--color-secondary); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1 class="hero-title" style="margin-bottom: 0;">Контакты</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 class="section-title">Как нас найти</h2>
+                        <div style="font-size: 18px; line-height: 1.8;">
+                            <p style="margin-bottom:15px"><strong>Адрес:</strong> Республика Абхазия, г. Сухум, ул. Ардзинба 65</p>
+                            <p style="margin-bottom:15px"><strong>Телефон:</strong> <a href="tel:+79407307771" style="color: var(--color-primary); font-weight: 600;">+7 (940) 730-77-71</a></p>
+                            <p style="margin-bottom:15px"><strong>Телефон:</strong> <a href="tel:+79409307771" style="color: var(--color-primary); font-weight: 600;">+7 (940) 930-77-71</a></p>
+                            <p style="margin-bottom:15px"><strong>Режим работы:</strong> пн-пт 9:00–17:00</p>
+                        </div>
+                        
+                        <div style="display:none; background: var(--color-background-alt); padding: 30px; border-radius: 8px;">
+                            <h3 style="margin-bottom:20px;">Остались вопросы? Напишите нам</h3>
+                            <form class="modal-form">
+                                <div class="form-group"><input type="text" placeholder="Ваше имя" required></div>
+                                <div class="form-group"><input type="tel" placeholder="Телефон" required></div>
+                                <div class="form-group">
+                                    <textarea placeholder="Ваше сообщение" rows="4" style="width:100%; padding:15px; border:1px solid var(--color-border); border-radius:4px; font-family: inherit;"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить сообщение</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; min-height: 500px; background: #eee; border-radius: 8px; display:flex; align-items:center; justify-content:center; color:#999; border: 1px solid var(--color-border);">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab9d4d5ac2087f60c60283d9f7d227d81c0e287662a03c4df9041ebec852ec628&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

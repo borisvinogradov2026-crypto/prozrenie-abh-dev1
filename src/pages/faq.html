@@ -1,0 +1,31 @@
+{% extends "src/layouts/_base.html" %}
+{% set title = "Вопрос-ответ | Центр микрохирургии глаза PROзрение" %}
+
+{% block content %}
+    <main>
+        <section class="section page-header" style="background-color: var(--color-secondary); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1 class="hero-title" style="margin-bottom: 0;">Частые вопросы</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">Болезненна ли лазерная коррекция зрения? <span class="faq-icon">+</span></div>
+                        <div class="faq-answer">Операция проводится под местной капельной анестезией, поэтому во время процедуры вы не почувствуете боли. После операции, в течение 2-3 часов, может наблюдаться слезотечение и ощущение «песка» в глазах.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Сколько длится операция по удалению катаракты? <span class="faq-icon">+</span></div>
+                        <div class="faq-answer">Сама хирургическая процедура занимает в среднем от 10 до 15 минут. Однако с учетом подготовки и послеоперационного отдыха пациент проводит в клинике около 2-3 часов.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Можно ли делать коррекцию нерожавшим женщинам? <span class="faq-icon">+</span></div>
+                        <div class="faq-answer">Да, можно. Лазерная коррекция зрения не влияет на процесс естественных родов. Важным фактором является состояние сетчатки, которое врач обязательно проверяет на предварительной диагностике.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

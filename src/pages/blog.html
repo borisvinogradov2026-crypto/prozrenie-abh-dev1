@@ -1,0 +1,46 @@
+{% extends "src/layouts/_base.html" %}
+{% set title = "Блог | Центр микрохирургии глаза PROзрение" %}
+
+{% block content %}
+    <main>
+        <section class="section page-header" style="background-color: var(--color-secondary); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1 class="hero-title" style="margin-bottom: 0;">Полезные статьи</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-cover">Фото для статьи</div>
+                        <div class="blog-content">
+                            <div class="blog-date">15 марта 2026</div>
+                            <h3 class="blog-title">Как подготовиться к лазерной коррекции зрения?</h3>
+                            <p class="blog-excerpt">В этой статье мы подробно рассказываем о том, какие анализы нужно сдать и какие ограничения соблюдать перед операцией.</p>
+                            <a href="#" class="btn btn-outline btn-block">Читать далее</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-cover">Фото для статьи</div>
+                        <div class="blog-content">
+                            <div class="blog-date">02 февраля 2026</div>
+                            <h3 class="blog-title">Катаракта: симптомы, причины и методы лечения</h3>
+                            <p class="blog-excerpt">Всё, что нужно знать о катаракте. От ранних симптомов до современных бесшовных методов удаления мутного хрусталика.</p>
+                            <a href="#" class="btn btn-outline btn-block">Читать далее</a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-cover">Фото для статьи</div>
+                        <div class="blog-content">
+                            <div class="blog-date">20 января 2026</div>
+                            <h3 class="blog-title">Мифы о лазерной коррекции зрения</h3>
+                            <p class="blog-excerpt">Развеиваем самые популярные страхи и мифы о лазерной хирургии. Почему не стоит бояться восстановления зрения?</p>
+                            <a href="#" class="btn btn-outline btn-block">Читать далее</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

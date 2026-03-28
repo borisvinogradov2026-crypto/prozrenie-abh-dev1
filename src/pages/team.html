@@ -1,0 +1,32 @@
+{% extends "src/layouts/_base.html" %}
+{% from "src/components/_doctor-card.html" import doctor_card %}
+{% set title = "Наши врачи | Центр микрохирургии глаза PROзрение" %}
+
+{% block content %}
+    <main>
+        <section class="section page-header" style="background-color: var(--color-secondary); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1 class="hero-title" style="margin-bottom: 0;">Наши врачи</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="doctors-grid">
+                    {% for doctor in doctors %}
+                        {{ doctor_card(
+                            name=doctor.name,
+                            spec=doctor.spec,
+                            exp=doctor.exp,
+                            photo=doctor.photo,
+                            certs=doctor.certs,
+                            show_button=doctor.show_button or (not doctor.certs)
+                        ) }}
+                    {% endfor %}
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default("Центр микрохирургии глаза | PROзрение") }}</title>
+    <meta name="description" content="Информационный сайт медицинского Центра микрохирургии глаза. Профессиональное лечение, опытные врачи, современное оборудование.">
+    
+    <!-- Подключение шрифтов (Playfair Display & Golos Text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Golos+Text:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/variables.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <!-- SVG Sprite (hidden) -->
+    {% include "src/assets/sprite.svg" %}
+
+    <!-- Header -->
+    {% include "src/components/_header.html" %}
+
+    <main>
+        <!-- Контент конкретной страницы -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include "src/components/_footer.html" %}
+
+    <!-- Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

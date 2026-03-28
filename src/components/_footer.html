@@ -1,0 +1,69 @@
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-col">
+            <a href="index.html" class="logo logo-light">
+                <span class="logo-icon">👁️</span>
+                <span class="logo-text">PROзрение<br><span class="logo-subtitle">Центр микрохирургии глаза</span></span>
+            </a>
+            <p class="footer-desc">Современный Центр микрохирургии глаза. Возвращаем зрение с помощью передовых технологий.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Разделы</h4>
+            <ul class="footer-nav">
+                <li><a href="index.html#about">О клинике</a></li>
+                <li><a href="index.html#services">Услуги</a></li>
+                <li><a href="index.html#doctors">Врачи</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p>Республика Абхазия, г. Сухум, ул. Ардзинба 65</p>
+            <p><a href="tel:+79407307771" class="footer-phone">+7 (940) 730-77-71</a></p>
+            <p><a href="tel:+79409307771" class="footer-phone">+7 (940) 930-77-71</a></p>
+            <p>пн-пт 9:00–17:00</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2026 Центр микрохирургии глаза "PROзрение". Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Call Button -->
+<a href="tel:+79407307771" class="floating-call-btn" aria-label="Позвонить нам">
+    <svg class="icon"><use href="#icon-phone"></use></svg>
+</a>
+
+<!-- Callback Modal -->
+<div class="modal-overlay" id="callback-modal">
+    <div class="modal-window">
+        <button class="modal-close" onclick="closeModal('callback-modal')" aria-label="Закрыть">&times;</button>
+        <h3 class="modal-title">Запись на прием</h3>
+        <p class="modal-desc">Оставьте свои данные, и мы перезвоним вам в течение 15 минут для подтверждения времени.</p>
+        <form class="modal-form" id="callback-form">
+            <div class="form-group">
+                <label for="name">Ваше имя *</label>
+                <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+            </div>
+            <div class="form-group">
+                <label for="phone">Ваш телефон *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="form-group">
+                <label for="service">Интересующая услуга</label>
+                <select id="service" name="service">
+                    <option value="">Выберите услугу</option>
+                    <option value="consultation">Первичная консультация</option>
+                    <option value="laser">Лазерная коррекция зрения</option>
+                    <option value="cataract">Лечение катаракты</option>
+                    <option value="glaucoma">Лечение глаукомы</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Записаться</button>
+            <p class="form-policy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+{% extends "src/layouts/_base.html" %}
+{% set title = "Наши услуги | Центр микрохирургии глаза PROзрение" %}
+
+{% block content %}
+    <main>
+        <section class="section page-header" style="background-color: var(--color-secondary); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1 class="hero-title" style="margin-bottom: 0;">Наши услуги</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img-placeholder">Лазерная коррекция</div>
+                        <div class="service-content">
+                            <h3>Лазерная коррекция зрения</h3>
+                            <p>Восстановление зрения при близорукости, дальнозоркости и астигматизме современными методами.</p>
+                            <h4>Показания:</h4>
+                            <ul class="check-list" style="margin-bottom: 20px; font-size: 14px;">
+                                <li>Миопия до -12.0 D</li>
+                                <li>Гиперметропия до +6.0 D</li>
+                                <li>Астигматизм до 6.0 D</li>
+                            </ul>
+                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на диагностику</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-img-placeholder">Хирургия катаракты</div>
+                        <div class="service-content">
+                            <h3>Лечение катаракты (Факоэмульсификация)</h3>
+                            <p>Бесшовное удаление мутного хрусталика с имплантацией современных ИОЛ премиум-класса.</p>
+                            <h4>Результат:</h4>
+                            <p style="font-size: 14px;">Возвращение четкости зрения уже на следующий день, возможность читать и водить машину без очков (при выборе мультифокальной линзы).</p>
+                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на прием</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img-placeholder">Лечение глаукомы</div>
+                        <div class="service-content">
+                            <h3>Лечение глаукомы</h3>
+                            <p>Консервативное, лазерное и хирургическое снижение внутриглазного давления для сохранения зрения.</p>
+                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на прием</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img-placeholder">Детское отделение</div>
+                        <div class="service-content">
+                            <h3>Детская офтальмология</h3>
+                            <p>Аппаратное лечение косоглазия, амблиопии и контроль прогрессирования близорукости.</p>
+                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на прием</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

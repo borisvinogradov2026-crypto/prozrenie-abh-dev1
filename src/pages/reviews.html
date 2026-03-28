@@ -1,0 +1,59 @@
+{% extends "src/layouts/_base.html" %}
+{% set title = "Отзывы | Центр микрохирургии глаза PROзрение" %}
+
+{% block content %}
+    <main>
+        <section class="section page-header" style="background-color: var(--color-secondary); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1 class="hero-title" style="margin-bottom: 0;">Отзывы пациентов</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">А</div>
+                            <div>
+                                <h4 class="reviewer-name">Анна Сергеева</h4>
+                                <div class="review-date">12 октября 2025</div>
+                            </div>
+                        </div>
+                        <p class="review-text">«Сделала лазерную коррекцию Femto-LASIK. Жалею только об одном — что не решилась раньше! Операция прошла быстро и безболезненно. Зрение теперь 120%»</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">В</div>
+                            <div>
+                                <h4 class="reviewer-name">Виктор Николаевич</h4>
+                                <div class="review-date">05 сентября 2025</div>
+                            </div>
+                        </div>
+                        <p class="review-text">«Приводил маму на удаление катаракты. Очень чуткий персонал, операция заняла 15 минут, надели специальную линзу. На следующий день мама уже читала без очков.»</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">Е</div>
+                            <div>
+                                <h4 class="reviewer-name">Евгений М.</h4>
+                                <div class="review-date">20 августа 2025</div>
+                            </div>
+                        </div>
+                        <p class="review-text">«Отличная клиника! Современное оборудование, вежливые администраторы и настоящие профессионалы своего дела. Цены полностью оправдывают качество.»</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">М</div>
+                            <div>
+                                <h4 class="reviewer-name">Мария Ивановна</h4>
+                                <div class="review-date">14 июля 2025</div>
+                            </div>
+                        </div>
+                        <p class="review-text">«Проходила диагностику перед операцией. Врачи все подробно объяснили, рассказали обо всех нюансах и помогли выбрать оптимальный метод коррекции.»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "src/layouts/_base.html" %}
+{% set title = "Цены | Центр микрохирургии глаза PROзрение" %}
+
+{% block content %}
+    <main>
+        <section class="section page-header" style="background-color: var(--color-secondary); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1 class="hero-title" style="margin-bottom: 0;">Цены на услуги</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Диагностика зрения</h2>
+                <div style="overflow-x: auto;">
+                    <table class="price-table">
+                        <tr><th>Наименование услуги</th><th>Стоимость</th></tr>
+                        <tr><td>Комплексное офтальмологическое обследование с расшифровкой результатов</td><td class="price-value">3 500 ₽</td></tr>
+                        <tr><td>Оптическая когерентная томография (ОКТ) одного глаза</td><td class="price-value">1 800 ₽</td></tr>
+                        <tr><td>УЗИ глаза (В-сканирование)</td><td class="price-value">1 200 ₽</td></tr>
+                    </table>
+                </div>
+
+                <h2 class="section-title">Лазерная коррекция зрения (за 1 глаз)</h2>
+                <div style="overflow-x: auto;">
+                    <table class="price-table">
+                        <tr><th>Наименование услуги</th><th>Стоимость</th></tr>
+                        <tr><td>Лазерная коррекция по методике LASIK</td><td class="price-value">25 000 ₽</td></tr>
+                        <tr><td>Лазерная коррекция по методике Femto-LASIK</td><td class="price-value">45 000 ₽</td></tr>
+                        <tr><td>Индивидуальная супер-коррекция (Super-LASIK)</td><td class="price-value">35 000 ₽</td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,231 @@
+{% extends "src/layouts/_base.html" %}
+{% from "src/components/_doctor-card.html" import doctor_card %}
+{% set title = "Центр микрохирургии глаза в Республике Абхазия | PROзрение" %}
+
+{% block content %}
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-title">Профессиональная микрохирургия глаза <span style="color: var(--color-primary);">в Республике Абхазия</span></h1>
+                    <p class="hero-subtitle">Современные технологии диагностики и лечения зрения. Вернем вам яркие краски жизни без боли и долгих ожиданий.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="openModal('callback-modal')">Записаться на прием</button>
+                        <a href="#services" class="btn btn-outline">Наши услуги</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-img-wrap">
+                        <img src="hero-eye.png" alt="Крупный план здорового глаза — микрохирургия глаза в клинике PROзрение" class="hero-eye-img" width="440" height="400" />
+                        <div class="badge-float b1">
+                            <div class="badge-icon">
+                                <svg class="icon"><use href="#icon-badge-safe"></use></svg>
+                            </div>
+                            <div class="badge-text"><strong>Безопасно</strong><span>Сертифицированная клиника</span></div>
+                        </div>
+                        <div class="badge-float b2">
+                            <div class="badge-icon">
+                                <svg class="icon"><use href="#icon-clock"></use></svg>
+                            </div>
+                            <div class="badge-text"><strong>30 мин</strong><span>Длительность операции</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <div class="trust-bar-section">
+            <div class="container">
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <svg class="icon"><use href="#icon-shield"></use></svg>
+                        <span>Лицензия Минздрава Республики Абхазия</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <svg class="icon"><use href="#icon-check-circle"></use></svg>
+                        <span>Современное оборудование</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <svg class="icon"><use href="#icon-users"></use></svg>
+                        <span>Опытные хирурги</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <svg class="icon"><use href="#icon-lock"></use></svg>
+                        <span>Гарантия результата</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="container about-inner">
+                <div class="about-content">
+                    <h2 class="section-title">О Центре «PROзрение»</h2>
+                    <p class="section-text">Мы — ведущая специализированная клиника микрохирургии глаза в Республике Абхазия, объединившая лучших офтальмологов и передовое оборудование. Наша цель — оказание медицинской помощи мирового уровня, сочетая индивидуальный подход и проверенные методы лечения.</p>
+                    <ul class="check-list">
+                        <li>Диагностика на оборудовании последнего поколения</li>
+                        <li>Хирургия одного дня без госпитализации</li>
+                        <li>Гарантия результата и сопровождение после операции</li>
+                    </ul>
+                    <a href="#doctors" class="btn btn-outline" style="margin-top: 25px;">Наша команда</a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Года успешной работы</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Врачей высшей категории</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1 000+</div>
+                        <div class="stat-label">Проведенных операций</div>
+                    </div>
+                    <div class="stat-item" style="background-color: var(--color-primary); color: var(--color-white); border: none;">
+                        <div class="stat-number" style="color: var(--color-white);">99%</div>
+                        <div class="stat-label" style="color: rgba(255,255,255,0.8);">Успешных операций</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Advantages Section -->
+        <section class="section advantages" style="background-color: var(--color-background-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">Почему выбирают нас</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="adv-icon"><svg class="icon"><use href="#icon-eye"></use></svg></div>
+                        <h3 class="adv-title">Передовое оборудование</h3>
+                        <p class="adv-text">Используем лазерные системы последнего поколения для максимальной точности операций.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="adv-icon"><svg class="icon"><use href="#icon-users"></use></svg></div>
+                        <h3 class="adv-title">Опытные хирурги</h3>
+                        <p class="adv-text">Каждый врач имеет стаж более 10 лет и регулярно проходит стажировки за рубежом.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="adv-icon"><svg class="icon"><use href="#icon-clock"></use></svg></div>
+                        <h3 class="adv-title">Быстрое восстановление</h3>
+                        <p class="adv-text">Минимально инвазивные методы позволяют вернуться к полноценной жизни уже на следующий день.</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="adv-icon"><svg class="icon"><use href="#icon-shield"></use></svg></div>
+                        <h3 class="adv-title">Честные цены</h3>
+                        <p class="adv-text">Фиксированная стоимость услуг без скрытых платежей. В цену включено послеоперационное наблюдение.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview Section -->
+        <section class="section services" id="services">
+            <div class="container">
+                <h2 class="section-title text-center">Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img-placeholder">Лазерная коррекция</div>
+                        <div class="service-content">
+                            <h3>Лазерная коррекция зрения</h3>
+                            <p>Восстановление зрения при близорукости, дальнозоркости и астигматизме (LASIK, Femto-LASIK, SMILE).</p>
+                            <a href="services.html" class="btn btn-outline btn-block">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img-placeholder">Лечение катаракты</div>
+                        <div class="service-content">
+                            <h3>Лечение катаракты</h3>
+                            <p>Бесшовное удаление мутного хрусталика с имплантацией современных ИОЛ премиум-класса.</p>
+                            <a href="services.html" class="btn btn-outline btn-block">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img-placeholder">Детская офтальмология</div>
+                        <div class="service-content">
+                            <h3>Детская офтальмология</h3>
+                            <p>Комплексная диагностика, аппаратное лечение и контроль миопии у детей всех возрастов.</p>
+                            <a href="services.html" class="btn btn-outline btn-block">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="services.html" class="btn btn-primary">Все услуги клиники</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section class="section doctors" id="doctors">
+            <div class="container">
+                <h2 class="section-title text-center">Наша команда</h2>
+                <div class="doctors-grid">
+                    {% for doctor in doctors %}
+                        {% if doctor.featured %}
+                            {{ doctor_card(
+                                name=doctor.name,
+                                spec=doctor.spec,
+                                exp=doctor.exp,
+                                photo=doctor.photo,
+                                certs=doctor.certs
+                            ) }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="team.html" class="btn btn-outline">Все специалисты</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media / Trust Section -->
+        <section class="section media" id="media" style="background-color: var(--color-background-alt);">
+            <div class="container">
+                <h2 class="section-title text-center">СМИ о нас</h2>
+                <div class="media-logos">
+                    <div class="media-logo">Forbes</div>
+                    <div class="media-logo">РБК</div>
+                    <div class="media-logo">Коммерсантъ</div>
+                    <div class="media-logo">Ведомости</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="section reviews" id="reviews">
+            <div class="container">
+                <h2 class="section-title text-center">Отзывы пациентов</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">А</div>
+                            <div>
+                                <h4 class="reviewer-name">Анна Сергеева</h4>
+                                <div class="review-date">12 октября 2025</div>
+                            </div>
+                        </div>
+                        <p class="review-text">«Сделала лазерную коррекцию Femto-LASIK. Жалею только об одном — что не решилась раньше! Операция прошла быстро и безболезненно. Зрение теперь 120%»</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">В</div>
+                            <div>
+                                <h4 class="reviewer-name">Виктор Николаевич</h4>
+                                <div class="review-date">05 сентября 2025</div>
+                            </div>
+                        </div>
+                        <p class="review-text">«Приводил маму на удаление катаракты. Очень чуткий персонал, операция заняла 15 минут, надели специальную линзу. На следующий день мама уже читала без очков.»</p>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="reviews.html" class="btn btn-outline">Читать все отзывы</a>
+                </div>
+            </div>
+        </section>
+{% endblock %}

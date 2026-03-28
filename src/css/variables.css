@@ -1,0 +1,32 @@
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-primary: #1a4b8c;
+  --color-primary-hover: #2563a8;
+  --color-secondary: #ebf3ff;
+  --color-text: #1a2340;
+  --color-text-light: #5a6a8a;
+  --color-background-alt: #f0f6ff;
+  --color-success: #3b82c4;
+  --color-border: #d0dcee;
+
+  /* Typography */
+  --font-family-main: "Golos Text", sans-serif;
+  --font-family-heading: "Playfair Display", serif;
+  --font-size-base: 15px;
+  --font-size-lg: 17px;
+  --font-size-sm: 13px;
+
+  /* Layout */
+  --container-width: 1480px;
+  --container-padding: 48px;
+  --header-height: 72px;
+  --header-height-scrolled: 64px;
+
+  /* Shadows & Transitions */
+  --shadow-sm: 0 4px 16px rgba(26, 75, 140, 0.06);
+  --shadow-md: 0 8px 24px rgba(26, 75, 140, 0.12);
+  --shadow-lg: 0 16px 32px rgba(26, 75, 140, 0.16);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
