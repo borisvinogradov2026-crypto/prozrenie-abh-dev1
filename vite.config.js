@@ -5,7 +5,7 @@ import { resolve } from "path";
 import doctors from "./src/data/doctors.json";
 
 export default defineConfig({
-  base: "/",
+  base: process.env.NODE_ENV === "production" ? "/prozrenie-abh-dev1/" : "/",
   root: "src/pages",
   publicDir: resolve(__dirname, "public"),
   resolve: {
