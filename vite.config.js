@@ -3,6 +3,13 @@ import nunjucks from "vite-plugin-nunjucks";
 import { resolve } from "path";
 
 import doctors from "./src/data/doctors.json";
+import services from "./src/data/services.json";
+
+import nunjucksLib from "nunjucks";
+
+const nunjucksEnv = new nunjucksLib.Environment(
+  new nunjucksLib.FileSystemLoader(resolve(__dirname, "src"), { noCache: true })
+);
 
 export default defineConfig({
   base: process.env.NODE_ENV === "production" ? "/prozrenie-abh-dev1/" : "/",
@@ -15,16 +22,28 @@ export default defineConfig({
   },
   plugins: [
     nunjucks({
-      templatesDir: [
-        resolve(__dirname, "src/layouts"),
-        resolve(__dirname, "src/components"),
-        resolve(__dirname, "src/pages"),
-      ],
+      nunjucksEnvironment: nunjucksEnv,
       variables: {
-        "*": { doctors },
+        "*": { doctors, services },
       },
     }),
+    {
+      name: "nunjucks-hmr",
+      handleHotUpdate({ file, server }) {
+        if (file.endsWith(".njk")) {
+          server.ws.send({
+            type: "full-reload",
+            path: "*",
+          });
+        }
+      },
+    },
   ],
+  server: {
+    watch: {
+      ignored: ["!**/src/**/*.njk"],
+    },
+  },
 
   build: {
     outDir: resolve(__dirname, "dist"),

@@ -1,0 +1,25 @@
+{% macro serviceCard(service) %}
+<div class="service-card">
+    <div class="service-img-placeholder">{{ service.imagePlaceholder }}</div>
+    <div class="service-content">
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        
+        {% if service.details %}
+            {% if service.details.type == 'list' %}
+                <h4>{{ service.details.label }}</h4>
+                <ul class="check-list" style="margin-bottom: 20px; font-size: 14px;">
+                    {% for item in service.details.items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            {% elif service.details.type == 'text' %}
+                <h4>{{ service.details.label }}</h4>
+                <p style="font-size: 14px;">{{ service.details.content }}</p>
+            {% endif %}
+        {% endif %}
+        
+        <!-- <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">{{ service.buttonText }}</button> -->
+    </div>
+</div>
+{% endmacro %}

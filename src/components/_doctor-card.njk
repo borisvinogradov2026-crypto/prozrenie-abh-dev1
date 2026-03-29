@@ -1,0 +1,26 @@
+{% macro doctor_card(name, spec, exp, photo, certs=[], show_button=false) %}
+    <div class="doctor-card">
+        <div class="doctor-photo">
+            {% if photo %}
+                {{ photo | safe }}
+            {% else %}
+                <div class="doctor-avatar">{{ name | truncate(1, true, "") }}</div>
+            {% endif %}
+        </div>
+        <div class="doctor-info">
+            <h3 class="doctor-name">{{ name }}</h3>
+            <div class="doctor-spec">{{ spec }}</div>
+            <div class="doctor-exp">{{ exp }}</div>
+            {% if certs and certs.length > 0 %}
+                <div class="doctor-certs">
+                    {% for cert in certs %}
+                        <span class="cert-tag">{{ cert }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {# {% if show_button %}
+                                                                                                                        <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться</button>
+                                                                                                                    {% endif %} #}
+        </div>
+    </div>
+{% endmacro %}

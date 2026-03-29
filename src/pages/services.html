@@ -1,4 +1,4 @@
-{% extends "src/layouts/_base.html" %}
+{% extends "layouts/_base.njk" %}
 {% set title = "Наши услуги | Центр микрохирургии глаза PROзрение" %}
 
 {% block content %}
@@ -12,49 +12,10 @@
         <section class="section">
             <div class="container">
                 <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-img-placeholder">Лазерная коррекция</div>
-                        <div class="service-content">
-                            <h3>Лазерная коррекция зрения</h3>
-                            <p>Восстановление зрения при близорукости, дальнозоркости и астигматизме современными методами.</p>
-                            <h4>Показания:</h4>
-                            <ul class="check-list" style="margin-bottom: 20px; font-size: 14px;">
-                                <li>Миопия до -12.0 D</li>
-                                <li>Гиперметропия до +6.0 D</li>
-                                <li>Астигматизм до 6.0 D</li>
-                            </ul>
-                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на диагностику</button>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-img-placeholder">Хирургия катаракты</div>
-                        <div class="service-content">
-                            <h3>Лечение катаракты (Факоэмульсификация)</h3>
-                            <p>Бесшовное удаление мутного хрусталика с имплантацией современных ИОЛ премиум-класса.</p>
-                            <h4>Результат:</h4>
-                            <p style="font-size: 14px;">Возвращение четкости зрения уже на следующий день, возможность читать и водить машину без очков (при выборе мультифокальной линзы).</p>
-                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на прием</button>
-                        </div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-img-placeholder">Лечение глаукомы</div>
-                        <div class="service-content">
-                            <h3>Лечение глаукомы</h3>
-                            <p>Консервативное, лазерное и хирургическое снижение внутриглазного давления для сохранения зрения.</p>
-                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на прием</button>
-                        </div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-img-placeholder">Детское отделение</div>
-                        <div class="service-content">
-                            <h3>Детская офтальмология</h3>
-                            <p>Аппаратное лечение косоглазия, амблиопии и контроль прогрессирования близорукости.</p>
-                            <button class="btn btn-outline btn-block" onclick="openModal('callback-modal')">Записаться на прием</button>
-                        </div>
-                    </div>
+                    {% from "components/_service-card.njk" import serviceCard %}
+                    {% for service in services %}
+                        {{ serviceCard(service) }}
+                    {% endfor %}
                 </div>
             </div>
         </section>

@@ -18,10 +18,10 @@
 </head>
 <body>
     <!-- SVG Sprite (hidden) -->
-    {% include "src/assets/sprite.svg" %}
+    {% include "assets/sprite.svg" %}
 
     <!-- Header -->
-    {% include "src/components/_header.html" %}
+    {% include "components/_header.njk" %}
 
     <main>
         <!-- Контент конкретной страницы -->
@@ -29,7 +29,7 @@
     </main>
 
     <!-- Footer -->
-    {% include "src/components/_footer.html" %}
+    {% include "components/_footer.njk" %}
 
     <!-- Scripts -->
     <script type="module" src="/src/js/main.js"></script>
