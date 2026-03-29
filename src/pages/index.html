@@ -1,5 +1,6 @@
 {% extends "layouts/_base.njk" %}
 {% from "components/_doctor-card.njk" import doctor_card %}
+{% from "components/_video-card.njk" import video_card %}
 {% set title = "Центр микрохирургии глаза в Республике Абхазия | PROзрение" %}
 {% block content %}
     <!-- Hero Section -->
@@ -12,7 +13,7 @@
                 <p class="hero-subtitle">Современные технологии диагностики и лечения зрения. Вернем вам яркие краски жизни без боли и
                     долгих ожиданий.</p>
                 <div class="hero-actions">
-                    <button class="btn btn-primary" onclick="openModal('callback-modal')">Записаться на прием</button>
+                    <a href="tel:79409307771" class="btn btn-primary">Записаться на прием</a>
                     <a href="#services" class="btn btn-outline">Наши услуги</a>
                 </div>
             </div>
@@ -220,16 +221,24 @@
             </div>
         </div>
     </section>
-    <!-- Media / Trust Section -->
+    <!-- Media Section -->
     <section class="section media" id="media" style="background-color: var(--color-background-alt);">
         <div class="container">
             <h2 class="section-title text-center">СМИ о нас</h2>
-            <div class="media-logos">
-                <div class="media-logo">Forbes</div>
-                <div class="media-logo">РБК</div>
-                <div class="media-logo">Коммерсантъ</div>
-                <div class="media-logo">Ведомости</div>
+            <div class="video-grid">
+                {{ video_card(videoId="0EPUlREQcng", title="Репортаж телеканала Абаза ТВ") }}
+                {{ video_card(videoId="gAYFMatVLeI", title="Интервью с главным врачом") }}
+                {{ video_card(videoId="0yru9dn2IQA", title="PROзрение в Республике Абхазия") }}
             </div>
+            
+            <!-- <div class="media-logos-mini" style="margin-top: 60px; border-top: 1px solid var(--color-border); padding-top: 40px;">
+                <div class="media-logos">
+                    <div class="media-logo">Forbes</div>
+                    <div class="media-logo">РБК</div>
+                    <div class="media-logo">Коммерсантъ</div>
+                    <div class="media-logo">Ведомости</div>
+                </div>
+            </div> -->
         </div>
     </section>
     <!-- Reviews Section -->

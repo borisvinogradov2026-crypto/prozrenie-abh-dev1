@@ -1,0 +1,13 @@
+{% macro video_card(videoId, title) %}
+<div class="video-card" onclick="openVideoModal('{{ videoId }}')">
+    <div class="video-thumbnail">
+        <img src="https://i.ytimg.com/vi/{{ videoId }}/maxresdefault.jpg" alt="{{ title }}" loading="lazy">
+        <div class="play-button">
+            <svg class="icon"><use href="#icon-play"></use></svg>
+        </div>
+    </div>
+    {% if title %}
+    <h3 class="video-title">{{ title }}</h3>
+    {% endif %}
+</div>
+{% endmacro %}

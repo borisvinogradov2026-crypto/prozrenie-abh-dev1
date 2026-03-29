@@ -72,8 +72,33 @@ window.closeModal = function(modalId) {
 document.querySelectorAll('.modal-overlay').forEach(overlay => {
     overlay.addEventListener('click', function(e) {
         if(e.target === this) {
-            this.classList.remove('active');
-            document.body.style.overflow = '';
+            if (this.id === 'videoModal') {
+                closeVideoModal();
+            } else {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         }
     });
 });
+
+// Video Modal Specific Logic
+window.openVideoModal = function(videoId) {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoPlayer');
+    if(modal && iframe) {
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+window.closeVideoModal = function() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoPlayer');
+    if(modal && iframe) {
+        modal.classList.remove('active');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+};
